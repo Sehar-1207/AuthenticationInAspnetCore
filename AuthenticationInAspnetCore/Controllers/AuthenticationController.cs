@@ -29,13 +29,25 @@ namespace AuthenticationInAspnetCore.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] UserDto request)
+        public async Task<ActionResult<TokenResponseDto>> Login(UserDto request)
         {
             var token = await _service.Login(request);
             if (token is null)
             {
                 return Unauthorized(new { Message = "Invalid username or password" });
             }
+            return Ok(token);
+        }
+
+        [HttpPost("refreshtoken")]
+        public async Task<ActionResult<TokenResponseDto>> refreshToken(RefreshTokenRequestDto request)
+        {
+            var token = await _service.RefreshTokenAsync(request);
+            if(token is null)
+            {
+                return Unauthorized(new { Message = "Invalid token. or token expired" });
+            }
+
             return Ok(token);
         }
 

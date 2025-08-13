@@ -6,7 +6,8 @@ namespace AuthenticationInAspnetCore.Services
 {
     public interface IAuthService
     {
-        Task<string?> Login(UserDto request);
+        Task<TokenResponseDto?> Login(UserDto request);
+        Task<TokenResponseDto?> RefreshTokenAsync(RefreshTokenRequestDto request);
         Task<User?> RegisterAsync(UserDto request);
     }
 }
