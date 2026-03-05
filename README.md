@@ -1,6 +1,6 @@
 # AuthenticationInAspnetCore
 
-AuthenticationInAspnetCore is a sample ASP.NET Core project demonstrating the implementation of authentication mechanisms. The project showcases how to set up authentication, manage user login, registration, and secure access to protected resources. It provides a clear structure for handling user credentials and session management within an ASP.NET Core application.
+Authentication In AspnetCore is a sample ASP.NET Core project demonstrating the implementation of authentication mechanisms. The project showcases how to set up authentication, manage user login, registration, and secure access to protected resources. It provides a clear structure for handling user credentials and session management within an ASP.NET Core application.
 
 ---
 
@@ -92,28 +92,6 @@ Follow these steps to set up the application:
 ### AccountController
 
 Handles user registration, login, and logout actions.
-
-
-```api
-{
-    "title": "User Logout",
-    "description": "Logs out the authenticated user and clears the session.",
-    "method": "POST",
-    "baseUrl": "https://localhost:5001",
-    "endpoint": "/Account/Logout",
-    "headers": [],
-    "queryParams": [],
-    "pathParams": [],
-    "bodyType": "none",
-    "requestBody": "",
-    "responses": {
-        "200": {
-            "description": "Logout successful",
-            "body": "{\n  \"message\": \"User logged out.\"\n}"
-        }
-    }
-}
-```
 
 ---
 
