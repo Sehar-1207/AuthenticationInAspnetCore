@@ -19,7 +19,6 @@ AuthenticationInAspnetCore is a sample ASP.NET Core project demonstrating the im
 - [Running the Application](#running-the-application)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
-- [License](#license)
 
 ---
 
@@ -177,11 +176,6 @@ Handles user registration, login, and logout actions.
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
 
 ```card
 {
